@@ -1,0 +1,45 @@
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+.container {
+    background-image: url(Assets/storm.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 450px;
+    margin-top: 0px;
+    font-size: 25px;
+    font-weight: bolder;
+}
+
+.columns {
+    color: whitesmoke;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 30px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+#cityDiv {
+    width: 25%;
+    margin: auto;
+    text-align: center;
+}
+
+.jumbotron {
+    background-color: black;
+    color: whitesmoke;
+    margin: 0px;
+}
+
+input[type="text"] {
+    height: 40px;
+    font-size: 20px;
+}
+
+#submitCity {
+    height: 40px;
+    font-weight: bolder;
+}
