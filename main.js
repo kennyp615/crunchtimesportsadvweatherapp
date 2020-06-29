@@ -37,5 +37,30 @@ function getWeather() {
 
 
 function showResults(data) {
-    return "<p>Temperature: " + data.main.temp + "&deg;F</p>";
+    return "<p>Temperature: " + data.main.temp + "&deg;F</p>" +
+        "<p>Pressure: " + data.main.pressure + "</P>" +
+        "<p>Feels Like: " + data.main.feels_like + "&deg;F</p>" +
+        "<p>Humidity: " + data.main.humidity + "</P>" +
+        "<p>Temperature Low: " + data.main.temp_min + "&deg;F</p>" +
+        "<p>Temperature High: " + data.main.temp_max + "&deg;F</p>" +
+        "<p>Wind Speed: " + data.wind.speed + "</p>" +
+        "<p>Wind Degree: " + data.wind.deg + "</p>" +
+        "<p>Wind Gust: " + data.wind.gust + "</p>";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
