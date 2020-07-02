@@ -37,9 +37,20 @@ body {
 input[type="text"] {
     height: 40px;
     font-size: 20px;
+    padding-bottom: 10px;
 }
 
 #submitCity {
     height: 40px;
     font-weight: bolder;
+    padding-bottom: 10px;
+}
+
+#showWeather {
+    margin: auto;
+    background-color: black;
+    color: blanchedalmond;
+    border-radius: 25px;
+    text-align: center;
+    padding-top: 10px;
 }

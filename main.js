@@ -40,18 +40,12 @@ function showResults(data) {
     return '<h2>Current Weather for ' + data.name + ', </h2>' +
         "<p>Weather: " + data.weather[0].main + "</P>" +
         "<p>Weather Description: " + data.weather[0].description + "</P>" +
-        "<p>Sunrise: " + data.sys.sunrise + "</P>" +
         "<p>Temperature: " + data.main.temp + "&deg;F</p>" +
-        "<p>Pressure: " + data.main.pressure + "</P>" +
         "<p>Feels Like: " + data.main.feels_like + "&deg;F</p>" +
-        "<p>Humidity: " + data.main.humidity + "</P>" +
+        "<p>Humidity: " + data.main.humidity + "%</P>" +
         "<p>Temperature Low: " + data.main.temp_min + "&deg;F</p>" +
         "<p>Temperature High: " + data.main.temp_max + "&deg;F</p>" +
-        "<p>Wind Speed: " + data.wind.speed + "</p>" +
-        "<p>Wind Direction: " + data.wind.deg + "</p>" +
-        "<p>Wind Gust: " + data.wind.gust + "</p>" +
-        "<p>Sunset: " + data.sys.sunset + "</P>";
-
+        "<p>Wind Speed: " + data.wind.speed + "</p>";
 
 
 
