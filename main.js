@@ -36,16 +36,17 @@ function getWeather() {
 }
 
 
+
 function showResults(data) {
-    return '<h2>Current Weather for ' + data.name + ', </h2>' +
-        "<p>Weather: " + data.weather[0].main + "</P>" +
-        "<p>Weather Description: " + data.weather[0].description + "</P>" +
-        "<p>Temperature: " + data.main.temp + "&deg;F</p>" +
-        "<p>Feels Like: " + data.main.feels_like + "&deg;F</p>" +
-        "<p>Humidity: " + data.main.humidity + "%</P>" +
-        "<p>Temperature Low: " + data.main.temp_min + "&deg;F</p>" +
-        "<p>Temperature High: " + data.main.temp_max + "&deg;F</p>" +
-        "<p>Wind Speed: " + data.wind.speed + "</p>";
+    return '<h2 style="font-weight:bolder; font-size:30px;" class="text-center">Current Weather for ' + data.name + ', </h2>' +
+        "<h3><strong>Weather</strong>: " + data.weather[0].main + "</h3>" +
+        "<h3><strong>Weather Description</strong>:<img src ='http://openweathermap.org/img/wn/' + data.weather[0].icon +'.png'> " + data.weather[0].description + "</h3>" +
+        "<h3><strong>Temperature</strong>: " + data.main.temp + "&deg;F</h3>" +
+        "<h3><strong>Feels Like</strong>: " + data.main.feels_like + "&deg;F</h3>" +
+        "<h3><strong>Humidity</strong>: " + data.main.humidity + "%</h3>" +
+        "<h3><strong>Temperature Low</strong>: " + data.main.temp_min + "&deg;F<h3>" +
+        "<h3><strong>Temperature High</strong>: " + data.main.temp_max + "&deg;F</h3>" +
+        "<h3><strong>Wind Speed</strong>: " + data.wind.speed + "</h3>";
 
 
 
