@@ -22,8 +22,8 @@ body {
     text-align: center;
 }
 
-#cityDiv {
-    width: 25%;
+#control {
+    width: 15%;
     margin: auto;
     text-align: center;
 }
@@ -49,7 +49,7 @@ input[type="text"] {
 #showWeather {
     width: 50%;
     margin: auto;
-    background-color: skyblue;
+    background-color: crimson;
     color: whitesmoke;
     font-weight: bolder;
     border-radius: 25px;
@@ -71,4 +71,10 @@ input[type="text"] {
     background-color: skyblue;
     font-size: 20px;
     color: whitesmoke;
+}
+
+#cityDiv {
+    width: 30%;
+    margin: auto;
+    text-align: center;
 }

@@ -38,15 +38,15 @@ function getWeather() {
 
 
 function showResults(data) {
-    return '<h2 style="font-weight:bolder; font-size:30px;" class="text-center">Current Weather for ' + data.name + ', </h2>' +
-        "<h3><strong>Weather</strong>: " + data.weather[0].main + "</h3>" +
-        "<h3><strong>Weather Description</strong>:<img src ='http://openweathermap.org/img/wn/' + data.weather[0].icon +'.png'> " + data.weather[0].description + "</h3>" +
-        "<h3><strong>Temperature</strong>: " + data.main.temp + "&deg;F</h3>" +
-        "<h3><strong>Feels Like</strong>: " + data.main.feels_like + "&deg;F</h3>" +
-        "<h3><strong>Humidity</strong>: " + data.main.humidity + "%</h3>" +
-        "<h3><strong>Temperature Low</strong>: " + data.main.temp_min + "&deg;F<h3>" +
-        "<h3><strong>Temperature High</strong>: " + data.main.temp_max + "&deg;F</h3>" +
-        "<h3><strong>Wind Speed</strong>: " + data.wind.speed + "</h3>";
+    return '<h2 style="font-weight:bolder; font-size:30px; padding-top:20px;" class="text-center">Current Weather for ' + data.name + ', </h2>' +
+        "<h3 style='padding-left:40px;'><strong>Weather</strong>: " + data.weather[0].main + "</h3>" +
+        "<h3 style='padding-left:40px;'><strong>Weather Description</strong>:<img src ='http://openweathermap.org/img/w/" + data.weather[0].icon + ".png'> " + data.weather[0].description + "</h3>" +
+        "<h3 style='padding-left:40px;'><strong>Temperature</strong>: " + data.main.temp + "&deg;F</h3>" +
+        "<h3 style='padding-left:40px;'><strong>Feels Like</strong>: " + data.main.feels_like + "&deg;F</h3>" +
+        "<h3 style='padding-left:40px;'><strong>Humidity</strong>: " + data.main.humidity + "%</h3>" +
+        "<h3 style='padding-left:40px;'><strong>Temp Low</strong>: " + data.main.temp_min + "&deg;F<h3>" +
+        "<h3 style='padding-left:40px;'><strong>Temp High</strong>: " + data.main.temp_max + "&deg;F</h3>" +
+        "<h3 style='padding-left:40px; padding-bottom:30px;'><strong>Wind Speed</strong>: " + data.wind.speed + "</h3>";
 
 
 

@@ -50,20 +50,27 @@
         </div>
     </nav>
     <!--end nav section-->
-    <div class="jumbotron">
-        <h2 class="text-center" style="font-size:50px; font-weight:600">Get Current Football GameDay Weather Forecast!</h2>
+    <div class="jumbotron" style="margin-bottom:0px;">
+        <h2 class="text-center" style="font-size:40px; font-weight:600;">Get Current Football GameDay Weather Forecast!</h2>
     </div>
 
-    <h2 class="text-center text-primary" style="font-size: 30px; text-align: center;">Enter Home Team City Name</h2>
     <div class="container2">
-        <div class="row form-group form-inline" id="cityDiv">
-            <input type="text" name="city" id="city" class="form-control" placeholder="Enter city name">
-            <button id="submitCity" class="btn btn-primary">Search City</button>
+        <div class="row">
+            <div class="col-md-12">
+                <h2 class="text-center text-primary" style="font-size:25px; text-align: center;">Enter City Name</h2>
+            </div>
+
+            <div class="row form-group form-inline" id="cityDiv">
+                <input type="text" name="city" id="city" class="form-control" placeholder="Enter city name">
+                <button id="submitCity" class="btn btn-primary">Search City</button>
+            </div>
+
         </div>
 
-        <div id="error"></div>
-        <div id="showWeather"></div>
     </div>
+
+    <div id="error"></div>
+    <div id="showWeather"></div>
 
     <footer class="footer">
         <div class="content has-text-centered">
