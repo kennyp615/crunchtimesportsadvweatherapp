@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
-    $("#submitCity").click(function() {
-        return getWeather();
+    $("#submitForecast").click(function() {
+        return getForecast();
 
     });
 
@@ -9,28 +9,41 @@ $(document).ready(function() {
 
 });
 
-function getWeather() {
+function getForecast() {
     var city = $("#city").val();
+    var days = $("#days").val();
 
-    if (city != '') {
+    if (city != '' && days != '') {
         $.ajax({
-            url: 'http://api.openweathermap.org/data/2.5/weather?q=' + city + "&units=imperial" + "&APPID=ce9c9e80c5e50c93f0c8da9e286dd073",
+            url: 'http://api.openweathermap.org/data/2.5/forecast/daily?q=' + city + "&units=imperial" + "&cnt=" + days + "&APPID=ce9c9e80c5e50c93f0c8da9e286dd073",
             type: "GET",
             dataType: "jsonp",
             success: function(data) {
-                console.log(data)
-                var widget = showResults(data)
 
+                var table = '';
 
-                $("#showWeather").html(widget);
+                for (var i = 0; i < .data.list.length; i++) {
+                    table += "<tr>";
 
-                $("#city").val('')
+                    table += "<td>" + data.list[i].weather[0].icon + "</td>";
+                    table += "<td>" + data.list[i].weather[0].main + "</td>";
+                    table += "<td>" + data.list[i].weather[0].description + "</td>";
+
+                    table += "</tr>";
+
+                }
+
+                $("#ForecastWeather").html(table);
+
+                $("#city").val('');
+                $("#days").val('')
+
             }
 
         });
 
     } else {
-        $("#error").html("<div>City Field cannot be empty</div>");
+        $("#error").html("<div class='alert alert-danger' id='errorCity'><a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a>City field cannot be empty</div>");
     }
 
 }
@@ -47,20 +60,3 @@ function showResults(data) {
         "<h3 style='padding-left:40px;'><strong>Temp Low</strong>: " + data.main.temp_min + "&deg;F<h3>" +
         "<h3 style='padding-left:40px;'><strong>Temp High</strong>: " + data.main.temp_max + "&deg;F</h3>" +
         "<h3 style='padding-left:40px; padding-bottom:30px;'><strong>Wind Speed</strong>: " + data.wind.speed + " mph</h3>";
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-}
